@@ -10,5 +10,5 @@ println("------------ Groovy: IntegerReporter ------------")
 println new IntegerReporter().reportSquareRootsOfLargeNumbers(numbers)
 
 def reportSquareRootsOfLargeNumbers(numbers){
-    ""
+    numbers.findAll { it > 4 }.collect {(int)Math.sqrt(it)}.join(", ")
 }

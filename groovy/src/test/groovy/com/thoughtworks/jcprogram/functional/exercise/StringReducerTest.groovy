@@ -15,13 +15,11 @@ class StringReducerTest {
         reducer = new StringReducer()
     }
 
-    @Ignore
     @Test
     void shouldReduceStrings() {
         assertThat reducer.reduceToFirstLetterOfLengthFourStrings(["1234", "2345"]), is("12");
     }
 
-    @Ignore
     @Test
     void shouldReduceToNothingWhenStringIsNotLength4() {
         assertThat reducer.reduceToFirstLetterOfLengthFourStrings(["12345"]), is("");

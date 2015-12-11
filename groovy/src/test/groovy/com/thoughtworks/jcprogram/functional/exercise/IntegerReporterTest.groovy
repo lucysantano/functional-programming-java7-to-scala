@@ -17,20 +17,17 @@ class IntegerReporterTest {
         reporter = new IntegerReporter()
     }
 
-    @Ignore
     @Test
     def void shouldTakeSquareRootOfNumbers() {
         def result = reporter.reportSquareRootsOfLargeNumbers([9, 16])
         assertThat result, both(containsString("3")).and(containsString("4"))
     }
 
-    @Ignore
     @Test
     def void shouldReportNothingWhenThereIsOneNumberAndItIsLessThan4() {
         assertThat reporter.reportSquareRootsOfLargeNumbers([3]), is("")
     }
 
-    @Ignore
     @Test
     def void shouldInsertCommaAndSpaceBetweenNumbers() {
         assertThat reporter.reportSquareRootsOfLargeNumbers([9, 9]), is("3, 3")
