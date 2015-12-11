@@ -1,5 +1,7 @@
 package com.thoughtworks.jcprogram.functional.exercise;
 
+import com.sun.javafx.binding.StringFormatter;
+
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -18,7 +20,17 @@ public class IntegerReporter {
     }
 
     public String reportSquareRootsOfLargeNumbers(List<Integer> numbers) {
-        return "";
+        String ans = "";
+        for(Integer num : numbers){
+            if(num>4){
+                ans += (int)Math.sqrt(num) + ", ";
+            }
+        }
+        if(ans.equals("")){
+            return ans;
+        } else {
+            return ans.substring(0,ans.length()-2);
+        }
     }
 
 }

@@ -22,11 +22,9 @@ public class FilterExample {
 
     @Test
     public void shouldRemoveOddElements(){
-        Collection<Integer> onlyEvens = newArrayList(2, 4);
 
         Collection<Integer> filteredCollection = filter(newArrayList(1, 2, 3, 4), new IsEvenPredicate());
-        Collection<Integer> result = newArrayList(filteredCollection);
 
-        assertThat(result, is(onlyEvens));
+        assertThat(newArrayList(filteredCollection), is(newArrayList(2, 4)));
     }
 }

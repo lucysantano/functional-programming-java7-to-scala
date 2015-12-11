@@ -23,7 +23,6 @@ public class IntegerReporterTest {
         integerReporter = new IntegerReporter();
     }
 
-    @Ignore
     @Test
     public void shouldTakeSquareRootOfAllNumbers() {
         numbers.add(9);
@@ -34,7 +33,6 @@ public class IntegerReporterTest {
         assertThat(result, both(containsString("3")).and(containsString("4")));
     }
 
-    @Ignore
     @Test
     public void shouldSeparateNumbersWithCommaAndSpace() {
         numbers.add(9);
@@ -45,7 +43,6 @@ public class IntegerReporterTest {
         assertThat(result, is("3, 3"));
     }
 
-    @Ignore
     @Test
     public void shouldReportNothingWhenNumberIs4() {
         numbers.add(4);

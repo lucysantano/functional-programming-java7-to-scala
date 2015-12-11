@@ -1,6 +1,7 @@
 package com.thoughtworks.jcprogram.functional.exercise;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 
@@ -17,7 +18,13 @@ public class IntegerReporter {
     }
 
     public String reportSquareRootsOfLargeNumbers(List<Integer> numbers) {
-        return "";
+        return numbers
+                .stream()
+                .filter(value -> value > 4)
+                .map(Math::sqrt)
+                .map(Double::intValue)
+                .map(Object::toString)
+                .collect(Collectors.joining(", "));
     }
 
 }
